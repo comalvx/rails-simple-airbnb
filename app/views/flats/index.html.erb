@@ -1,0 +1,30 @@
+<div class="container">
+<div class="row">
+  <h2 class="col-12">All our flats</h2>
+</div>
+<div class="row">
+  <h5 class="col-12">All <%= @flats.length %> flats</h5>
+</div>
+
+<div class="row d-flex">
+<% @flats.each do |flat| %>
+    <div class="col-4">
+      <div class="card shadow-sm" style="width: 18rem;">
+        <div class="card-body bg-light">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <div class="info d-flex">
+            <p class="card-text mr-3"><i class="fas fa-euro-sign mr-2"></i><%= flat.price_per_night %></p>
+            <p class="card-text"><i class="fas fa-user-friends mr-2"></i><%= flat.number_of_guests %></p>
+          </div>
+        </div>
+          <div class="d-flex card-body">
+           <p><%= link_to 'More info', flat_path(flat), class: "mr-2 text-primary" %></p>
+           <p><%= link_to 'Edit', edit_flat_path(flat), class: "mr-2 text-warning" %></p>
+           <p><%= link_to 'Remove', flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class: "text-danger" %></p>
+          </div>
+      </div>
+    </div>
+<% end %>
+  </div>
+</div>

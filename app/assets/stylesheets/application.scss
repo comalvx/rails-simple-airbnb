@@ -1,0 +1,53 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+header {
+  background-color: #F8F9FA;
+}
+
+h1 {
+  font-family: 'Apple system', sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+h1 a {
+  color: #000000;
+}
+
+h1 a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-empty {
+  background-color: transparent;
+  color: #007BFF;
+}
+
+.card {
+  width: 100%;
+}
